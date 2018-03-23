@@ -1,4 +1,3 @@
-# hm-sys
 ##モデル概要
  今回私たちは、海馬の機能として「エピソード記憶」と「場所細胞」の二点に注目したモデルである。
 
@@ -45,6 +44,7 @@ Python 2.7.11
 - pip freeze
 
 +![image](https://user-images.githubusercontent.com/30830112/37820302-85695f9e-2ec3-11e8-9661-4f8c9c363c8e.png)
+
 
 
 
