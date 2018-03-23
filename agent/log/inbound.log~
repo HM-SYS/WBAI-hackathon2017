@@ -1,0 +1,28 @@
+2018-03-22 15:58:05,838 [INFO] [server] reward: 1.99899995327, success: 0, failure: 0, elapsed: 0
+2018-03-22 15:58:06,064 [INFO] [server] reward: 0.0, depth: [array([255, 255, 255, ...,  24,  24,  24], dtype=uint8)]
+2018-03-22 15:58:06,461 [INFO] [server] reward: -0.0150000015274, depth: [array([255, 255, 255, ...,  24,  23,  22], dtype=uint8)]
+2018-03-22 15:58:06,582 [INFO] [server] reward: -0.0210000015795, depth: [array([255, 255, 255, ...,  24,  23,  22], dtype=uint8)]
+2018-03-22 15:58:07,261 [INFO] [server] reward: -0.0549999624491, depth: [array([255, 255, 255, ...,  24,  24,  24], dtype=uint8)]
+2018-03-22 15:58:07,713 [INFO] [server] reward: -0.0779999792576, depth: [array([255, 255, 255, ...,  14,  25,  25], dtype=uint8)]
+2018-03-22 15:58:07,749 [INFO] [server] reward: 1.91999995708, success: 1, failure: 0, elapsed: 96
+2018-03-22 15:58:07,873 [INFO] [server] reward: -0.0010000000475, depth: [array([255, 255, 255, ...,  24,  24,  24], dtype=uint8)]
+2018-03-22 15:58:08,051 [INFO] [server] reward: -0.00800000037998, depth: [array([255, 255, 255, ...,  24,  23,  22], dtype=uint8)]
+2018-03-22 15:58:08,788 [INFO] [server] reward: -0.0439999811351, depth: [array([255, 255, 255, ...,  24,  24,  24], dtype=uint8)]
+2018-03-22 15:58:09,292 [INFO] [server] reward: -0.0709999650717, depth: [array([255, 255, 255, ...,  24,  24,  24], dtype=uint8)]
+2018-03-22 15:58:09,693 [INFO] [server] reward: -0.0910000056028, depth: [array([181, 195, 206, ...,  24,  24,  24], dtype=uint8)]
+2018-03-22 15:58:10,081 [INFO] [server] reward: -0.110000044107, depth: [array([10, 11, 11, ..., 12, 12, 12], dtype=uint8)]
+2018-03-22 15:58:10,095 [INFO] [server] reward: 1.88899993896, success: 2, failure: 0, elapsed: 127
+2018-03-22 15:58:10,215 [INFO] [server] reward: -0.0010000000475, depth: [array([255, 255, 255, ...,  24,  24,  24], dtype=uint8)]
+2018-03-22 15:58:10,446 [INFO] [server] reward: -0.0110000008717, depth: [array([255, 255, 255, ...,  24,  24,  24], dtype=uint8)]
+2018-03-22 15:58:11,215 [INFO] [server] reward: -0.0499999709427, depth: [array([255, 255, 255, ...,  24,  24,  24], dtype=uint8)]
+2018-03-22 15:58:11,613 [INFO] [server] reward: -0.0699999630451, depth: [array([255, 255, 255, ...,  14,  25,  25], dtype=uint8)]
+2018-03-22 15:58:11,641 [INFO] [server] reward: 1.92900002003, success: 3, failure: 0, elapsed: 84
+2018-03-22 15:58:11,735 [INFO] [server] reward: -0.0010000000475, depth: [array([255, 255, 255, ...,  24,  24,  24], dtype=uint8)]
+2018-03-22 15:58:11,896 [INFO] [server] reward: -0.00700000068173, depth: [array([255, 255, 255, ...,  24,  24,  24], dtype=uint8)]
+2018-03-22 15:58:12,499 [INFO] [server] reward: -0.0369999930263, depth: [array([255, 255, 255, ...,  14,  24,  24], dtype=uint8)]
+2018-03-22 15:58:12,522 [INFO] [server] reward: 1.9620000124, success: 4, failure: 0, elapsed: 45
+2018-03-22 15:58:12,612 [INFO] [server] reward: -0.0010000000475, depth: [array([255, 255, 255, ...,  24,  24,  24], dtype=uint8)]
+2018-03-22 15:58:12,852 [INFO] [server] reward: -0.0110000008717, depth: [array([227, 220, 238, ...,  24,  24,  24], dtype=uint8)]
+2018-03-22 15:58:13,695 [INFO] [server] reward: -0.0529999658465, depth: [array([227, 220, 238, ...,  24,  24,  24], dtype=uint8)]
+2018-03-22 15:58:14,111 [INFO] [server] reward: -0.0739999711514, depth: [array([255, 255, 255, ...,  24,  24,  24], dtype=uint8)]
+2018-03-22 15:58:14,523 [INFO] [server] reward: -0.0940000116825, depth: [array([255, 255, 255, ...,  24,  24,  24], dtype=uint8)]
