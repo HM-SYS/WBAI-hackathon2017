@@ -1,61 +1,331 @@
-2018-03-22 15:56:57,869 [INFO] [server] loading... /home/omori/デスクトップ/GItHub/hackathon-2017-HM_SYS_v1.5/agent/model/alexnet_feature_extractor.pickle
-2018-03-22 15:57:53,577 [INFO] [server] done
-2018-03-22 15:58:06,307 [INFO] [q_net] Initializing Q-Network...
-2018-03-22 15:58:06,436 [INFO] [q_net]  Random
-2018-03-22 15:58:06,986 [INFO] [q_net]  Random
-2018-03-22 15:58:06,986 [INFO] [q_net] step: 1
-2018-03-22 15:58:06,994 [INFO] [module] Step:None  Action:1  Reward:-0.0 
-2018-03-22 15:58:07,365 [INFO] [q_net] step: 2
-2018-03-22 15:58:07,365 [INFO] [module] Step:None  Action:2  Reward:-0.1 
-2018-03-22 15:58:07,755 [INFO] [module] episode finished. Reward:1.9
-2018-03-22 15:58:07,755 [INFO] [q_net] step: 3
-2018-03-22 15:58:07,861 [INFO] [q_net]  Random
-2018-03-22 15:58:07,861 [INFO] [q_net] step: 4
-2018-03-22 15:58:07,861 [INFO] [module] Step:None  Action:1  Reward:-0.1 
-2018-03-22 15:58:08,034 [INFO] [q_net]  Random
-2018-03-22 15:58:08,248 [INFO] [q_net]  Random
-2018-03-22 15:58:08,248 [INFO] [q_net] step: 5
-2018-03-22 15:58:08,248 [INFO] [module] Step:None  Action:1  Reward:-0.0 
-2018-03-22 15:58:08,943 [INFO] [q_net]  Random
-2018-03-22 15:58:08,944 [INFO] [q_net] step: 6
-2018-03-22 15:58:08,944 [INFO] [module] Step:None  Action:1  Reward:-0.0 
-2018-03-22 15:58:09,397 [INFO] [q_net]  Random
-2018-03-22 15:58:09,398 [INFO] [q_net] step: 7
-2018-03-22 15:58:09,398 [INFO] [module] Step:None  Action:1  Reward:-0.1 
-2018-03-22 15:58:09,803 [INFO] [q_net]  Random
-2018-03-22 15:58:09,803 [INFO] [q_net] step: 8
-2018-03-22 15:58:09,803 [INFO] [module] Step:None  Action:2  Reward:-0.1 
-2018-03-22 15:58:10,101 [INFO] [module] episode finished. Reward:1.9
-2018-03-22 15:58:10,101 [INFO] [q_net] step: 9
-2018-03-22 15:58:10,251 [INFO] [q_net]  Random
-2018-03-22 15:58:10,251 [INFO] [q_net] step: 10
-2018-03-22 15:58:10,252 [INFO] [module] Step:None  Action:2  Reward:-0.1 
-2018-03-22 15:58:10,418 [INFO] [q_net]  Random
-2018-03-22 15:58:10,635 [INFO] [q_net]  Random
-2018-03-22 15:58:10,636 [INFO] [q_net] step: 11
-2018-03-22 15:58:10,636 [INFO] [module] Step:None  Action:2  Reward:-0.0 
-2018-03-22 15:58:11,332 [INFO] [q_net] step: 12
-2018-03-22 15:58:11,333 [INFO] [module] Step:None  Action:2  Reward:-0.0 
-2018-03-22 15:58:11,650 [INFO] [module] episode finished. Reward:1.9
-2018-03-22 15:58:11,650 [INFO] [q_net] step: 13
-2018-03-22 15:58:11,716 [INFO] [q_net]  Random
-2018-03-22 15:58:11,716 [INFO] [q_net] step: 14
-2018-03-22 15:58:11,717 [INFO] [module] Step:None  Action:1  Reward:-0.1 
-2018-03-22 15:58:11,878 [INFO] [q_net]  Random
-2018-03-22 15:58:12,103 [INFO] [q_net]  Random
-2018-03-22 15:58:12,103 [INFO] [q_net] step: 15
-2018-03-22 15:58:12,111 [INFO] [module] Step:None  Action:2  Reward:-0.0 
-2018-03-22 15:58:12,529 [INFO] [module] episode finished. Reward:2.0
-2018-03-22 15:58:12,529 [INFO] [q_net] step: 16
-2018-03-22 15:58:12,767 [INFO] [q_net] step: 17
-2018-03-22 15:58:12,767 [INFO] [module] Step:None  Action:2  Reward:-0.0 
-2018-03-22 15:58:12,836 [INFO] [q_net]  Random
-2018-03-22 15:58:13,146 [INFO] [q_net] step: 18
-2018-03-22 15:58:13,147 [INFO] [module] Step:None  Action:3  Reward:-0.0 
-2018-03-22 15:58:13,819 [INFO] [q_net]  Random
-2018-03-22 15:58:13,819 [INFO] [q_net] step: 19
-2018-03-22 15:58:13,819 [INFO] [module] Step:None  Action:0  Reward:-0.1 
-2018-03-22 15:58:14,226 [INFO] [q_net] step: 20
-2018-03-22 15:58:14,226 [INFO] [module] Step:None  Action:2  Reward:-0.1 
-2018-03-22 15:58:14,683 [INFO] [q_net] step: 21
-2018-03-22 15:58:14,683 [INFO] [module] Step:None  Action:3  Reward:-0.1 
+2018-03-22 15:59:50,191 [INFO] [server] loading... /home/omori/デスクトップ/GItHub/hackathon-2017-HM_SYS_v1.5/agent/model/alexnet_feature_extractor.pickle
+2018-03-22 16:00:45,780 [INFO] [server] done
+2018-03-22 16:00:49,949 [INFO] [q_net] Initializing Q-Network...
+2018-03-22 16:00:50,074 [INFO] [q_net]  Random
+2018-03-22 16:00:50,110 [INFO] [module] episode finished. Reward:2.0
+2018-03-22 16:00:50,110 [INFO] [q_net] step: 1
+2018-03-22 16:00:50,305 [INFO] [q_net]  Random
+2018-03-22 16:00:50,707 [INFO] [q_net]  Random
+2018-03-22 16:00:50,707 [INFO] [q_net] step: 2
+2018-03-22 16:00:50,707 [INFO] [module] Step:None  Action:2  Reward:-0.0 
+2018-03-22 16:00:51,045 [INFO] [module] episode finished. Reward:2.0
+2018-03-22 16:00:51,046 [INFO] [q_net] step: 3
+2018-03-22 16:00:51,113 [INFO] [q_net]  Random
+2018-03-22 16:00:51,114 [INFO] [q_net] step: 4
+2018-03-22 16:00:51,114 [INFO] [module] Step:None  Action:3  Reward:-0.0 
+2018-03-22 16:00:51,306 [INFO] [q_net]  Random
+2018-03-22 16:00:51,471 [INFO] [q_net]  Random
+2018-03-22 16:00:51,482 [INFO] [q_net] step: 5
+2018-03-22 16:00:51,482 [INFO] [module] Step:None  Action:2  Reward:-0.0 
+2018-03-22 16:00:51,913 [INFO] [module] episode finished. Reward:2.0
+2018-03-22 16:00:51,913 [INFO] [q_net] step: 6
+2018-03-22 16:00:52,006 [INFO] [q_net]  Random
+2018-03-22 16:00:52,006 [INFO] [q_net] step: 7
+2018-03-22 16:00:52,006 [INFO] [module] Step:None  Action:1  Reward:-0.0 
+2018-03-22 16:00:52,129 [INFO] [q_net]  Random
+2018-03-22 16:00:52,265 [INFO] [q_net]  Random
+2018-03-22 16:00:52,283 [INFO] [q_net] step: 8
+2018-03-22 16:00:52,283 [INFO] [module] Step:None  Action:2  Reward:-0.0 
+2018-03-22 16:00:52,848 [INFO] [q_net]  Random
+2018-03-22 16:00:52,849 [INFO] [q_net] step: 9
+2018-03-22 16:00:52,849 [INFO] [module] Step:None  Action:2  Reward:-0.0 
+2018-03-22 16:00:53,159 [INFO] [module] episode finished. Reward:1.9
+2018-03-22 16:00:53,159 [INFO] [q_net] step: 10
+2018-03-22 16:00:53,249 [INFO] [q_net]  Random
+2018-03-22 16:00:53,249 [INFO] [q_net] step: 11
+2018-03-22 16:00:53,249 [INFO] [module] Step:None  Action:0  Reward:-0.1 
+2018-03-22 16:00:53,410 [INFO] [q_net]  Random
+2018-03-22 16:00:53,624 [INFO] [q_net]  Random
+2018-03-22 16:00:53,635 [INFO] [q_net] step: 12
+2018-03-22 16:00:53,635 [INFO] [module] Step:None  Action:3  Reward:-0.0 
+2018-03-22 16:00:54,212 [INFO] [q_net]  Random
+2018-03-22 16:00:54,212 [INFO] [q_net] step: 13
+2018-03-22 16:00:54,212 [INFO] [module] Step:None  Action:2  Reward:-0.0 
+2018-03-22 16:00:54,624 [INFO] [q_net] step: 14
+2018-03-22 16:00:54,625 [INFO] [module] Step:None  Action:0  Reward:-0.1 
+2018-03-22 16:22:30,671 [INFO] [server] loading... /home/omori/デスクトップ/GItHub/hackathon-2017-HM_SYS/agent/model/alexnet_feature_extractor.pickle
+2018-03-22 16:23:26,276 [INFO] [server] done
+2018-03-22 16:23:36,576 [INFO] [q_net] Initializing Q-Network...
+2018-03-22 16:23:36,702 [INFO] [q_net]  Random
+2018-03-22 16:23:37,266 [INFO] [q_net]  Random
+2018-03-22 16:23:37,266 [INFO] [q_net] step: 1
+2018-03-22 16:23:37,266 [INFO] [module] Step:None  Action:3  Reward:-0.0 
+2018-03-22 16:23:37,745 [INFO] [q_net] step: 2
+2018-03-22 16:23:37,745 [INFO] [module] Step:None  Action:0  Reward:-0.1 
+2018-03-22 16:23:38,141 [INFO] [q_net] step: 3
+2018-03-22 16:23:38,141 [INFO] [module] Step:None  Action:3  Reward:-0.1 
+2018-03-22 16:23:38,551 [INFO] [q_net]  Random
+2018-03-22 16:23:38,551 [INFO] [q_net] step: 4
+2018-03-22 16:23:38,551 [INFO] [module] Step:None  Action:1  Reward:-0.1 
+2018-03-22 16:23:39,009 [INFO] [q_net] step: 5
+2018-03-22 16:23:39,009 [INFO] [module] Step:None  Action:3  Reward:-0.1 
+2018-03-22 16:23:39,412 [INFO] [q_net] step: 6
+2018-03-22 16:23:39,412 [INFO] [module] Step:None  Action:3  Reward:-0.1 
+2018-03-22 16:23:39,816 [INFO] [q_net] step: 7
+2018-03-22 16:23:39,817 [INFO] [module] Step:None  Action:1  Reward:-0.2 
+2018-03-22 16:23:40,206 [INFO] [q_net] step: 8
+2018-03-22 16:23:40,207 [INFO] [module] Step:None  Action:2  Reward:-0.2 
+2018-03-22 16:23:40,520 [INFO] [module] episode finished. Reward:1.8
+2018-03-22 16:23:40,520 [INFO] [q_net] step: 9
+2018-03-22 16:23:40,612 [INFO] [q_net]  Random
+2018-03-22 16:23:40,612 [INFO] [q_net] step: 10
+2018-03-22 16:23:40,612 [INFO] [module] Step:None  Action:1  Reward:-0.2 
+2018-03-22 16:23:40,792 [INFO] [q_net]  Random
+2018-03-22 16:23:41,029 [INFO] [q_net]  Random
+2018-03-22 16:23:41,029 [INFO] [q_net] step: 11
+2018-03-22 16:23:41,029 [INFO] [module] Step:None  Action:1  Reward:-0.0 
+2018-03-22 16:23:41,628 [INFO] [q_net]  Random
+2018-03-22 16:23:41,628 [INFO] [q_net] step: 12
+2018-03-22 16:23:41,629 [INFO] [module] Step:None  Action:1  Reward:-0.0 
+2018-03-22 16:23:42,020 [INFO] [q_net]  Random
+2018-03-22 16:23:42,020 [INFO] [q_net] step: 13
+2018-03-22 16:23:42,020 [INFO] [module] Step:None  Action:1  Reward:-0.1 
+2018-03-22 16:31:18,901 [INFO] [server] loading... /home/omori/デスクトップ/GItHub/hackathon-2017-HM_SYS/agent/model/alexnet_feature_extractor.pickle
+2018-03-22 16:32:14,442 [INFO] [server] done
+2018-03-22 16:32:48,018 [INFO] [q_net] Initializing Q-Network...
+2018-03-22 16:32:48,144 [INFO] [q_net]  Random
+2018-03-22 16:32:48,711 [INFO] [q_net]  Random
+2018-03-22 16:32:48,711 [INFO] [q_net] step: 1
+2018-03-22 16:32:48,712 [INFO] [module] Step:None  Action:0  Reward:-0.0 
+2018-03-22 16:32:49,115 [INFO] [q_net] step: 2
+2018-03-22 16:32:49,115 [INFO] [module] Step:None  Action:1  Reward:-0.1 
+2018-03-22 16:32:49,508 [INFO] [q_net]  Random
+2018-03-22 16:32:49,508 [INFO] [q_net] step: 3
+2018-03-22 16:32:49,508 [INFO] [module] Step:None  Action:3  Reward:-0.1 
+2018-03-22 16:32:49,910 [INFO] [q_net] step: 4
+2018-03-22 16:32:49,910 [INFO] [module] Step:None  Action:2  Reward:-0.1 
+2018-03-22 16:32:50,184 [INFO] [module] episode finished. Reward:1.9
+2018-03-22 16:32:50,185 [INFO] [q_net] step: 5
+2018-03-22 16:32:50,312 [INFO] [q_net] step: 6
+2018-03-22 16:32:50,312 [INFO] [module] Step:None  Action:0  Reward:-0.1 
+2018-03-22 16:32:50,398 [INFO] [q_net]  Random
+2018-03-22 16:32:50,666 [INFO] [q_net] step: 7
+2018-03-22 16:32:50,666 [INFO] [module] Step:None  Action:2  Reward:-0.0 
+2018-03-22 16:32:51,140 [INFO] [module] episode finished. Reward:2.0
+2018-03-22 16:32:51,141 [INFO] [q_net] step: 8
+2018-03-22 16:32:51,226 [INFO] [q_net]  Random
+2018-03-22 16:32:51,226 [INFO] [q_net] step: 9
+2018-03-22 16:32:51,227 [INFO] [module] Step:None  Action:0  Reward:-0.0 
+2018-03-22 16:32:51,371 [INFO] [q_net]  Random
+2018-03-22 16:32:51,581 [INFO] [q_net]  Random
+2018-03-22 16:32:51,587 [INFO] [q_net] step: 10
+2018-03-22 16:32:51,588 [INFO] [module] Step:None  Action:1  Reward:-0.0 
+2018-03-22 16:32:52,203 [INFO] [q_net]  Random
+2018-03-22 16:32:52,204 [INFO] [q_net] step: 11
+2018-03-22 16:32:52,204 [INFO] [module] Step:None  Action:3  Reward:-0.0 
+2018-03-22 16:32:52,655 [INFO] [q_net]  Random
+2018-03-22 16:32:52,656 [INFO] [q_net] step: 12
+2018-03-22 16:32:52,656 [INFO] [module] Step:None  Action:1  Reward:-0.1 
+2018-03-22 16:32:53,060 [INFO] [q_net] step: 13
+2018-03-22 16:32:53,061 [INFO] [module] Step:None  Action:0  Reward:-0.1 
+2018-03-22 16:32:53,434 [INFO] [q_net]  Random
+2018-03-22 16:32:53,434 [INFO] [q_net] step: 14
+2018-03-22 16:32:53,434 [INFO] [module] Step:None  Action:1  Reward:-0.1 
+2018-03-22 16:32:53,829 [INFO] [q_net] step: 15
+2018-03-22 16:32:53,829 [INFO] [module] Step:None  Action:1  Reward:-0.1 
+2018-03-22 16:32:54,225 [INFO] [q_net] step: 16
+2018-03-22 16:32:54,225 [INFO] [module] Step:None  Action:3  Reward:-0.1 
+2018-03-22 16:32:54,603 [INFO] [q_net]  Random
+2018-03-22 16:32:54,603 [INFO] [q_net] step: 17
+2018-03-22 16:32:54,603 [INFO] [module] Step:None  Action:2  Reward:-0.2 
+2018-03-22 16:32:55,020 [INFO] [q_net] step: 18
+2018-03-22 16:32:55,020 [INFO] [module] Step:None  Action:3  Reward:-0.2 
+2018-03-22 16:32:55,409 [INFO] [q_net]  Random
+2018-03-22 16:32:55,409 [INFO] [q_net] step: 19
+2018-03-22 16:32:55,409 [INFO] [module] Step:None  Action:3  Reward:-0.2 
+2018-03-22 16:32:55,800 [INFO] [q_net] step: 20
+2018-03-22 16:32:55,800 [INFO] [module] Step:None  Action:3  Reward:-0.2 
+2018-03-22 16:32:56,206 [INFO] [q_net] step: 21
+2018-03-22 16:32:56,206 [INFO] [module] Step:None  Action:2  Reward:-0.2 
+2018-03-22 16:32:56,572 [INFO] [module] episode finished. Reward:1.7
+2018-03-22 16:32:56,572 [INFO] [q_net] step: 22
+2018-03-22 16:32:56,673 [INFO] [q_net] step: 23
+2018-03-22 16:32:56,674 [INFO] [module] Step:None  Action:3  Reward:-0.3 
+2018-03-22 16:32:56,885 [INFO] [q_net]  Random
+2018-03-22 16:32:57,140 [INFO] [q_net] step: 24
+2018-03-22 16:32:57,146 [INFO] [module] Step:None  Action:2  Reward:-0.0 
+2018-03-22 16:32:57,672 [INFO] [q_net]  Random
+2018-03-22 16:32:57,672 [INFO] [q_net] step: 25
+2018-03-22 16:32:57,672 [INFO] [module] Step:None  Action:1  Reward:-0.0 
+2018-03-22 16:32:58,053 [INFO] [q_net]  Random
+2018-03-22 16:32:58,054 [INFO] [q_net] step: 26
+2018-03-22 16:32:58,054 [INFO] [module] Step:None  Action:3  Reward:-0.1 
+2018-03-22 16:32:58,444 [INFO] [q_net]  Random
+2018-03-22 16:32:58,444 [INFO] [q_net] step: 27
+2018-03-22 16:32:58,444 [INFO] [module] Step:None  Action:3  Reward:-0.1 
+2018-03-22 16:32:58,856 [INFO] [q_net] step: 28
+2018-03-22 16:32:58,856 [INFO] [module] Step:None  Action:2  Reward:-0.1 
+2018-03-22 16:32:59,201 [INFO] [module] episode finished. Reward:1.9
+2018-03-22 16:32:59,201 [INFO] [q_net] step: 29
+2018-03-22 16:32:59,345 [INFO] [q_net] step: 30
+2018-03-22 16:32:59,345 [INFO] [module] Step:None  Action:0  Reward:-0.1 
+2018-03-22 16:32:59,467 [INFO] [q_net]  Random
+2018-03-22 16:55:13,079 [INFO] [server] loading... /home/omori/デスクトップ/GItHub/hackathon-2017-HM_SYS/agent/model/alexnet_feature_extractor.pickle
+2018-03-22 16:56:08,608 [INFO] [server] done
+2018-03-22 16:56:47,650 [INFO] [q_net] Initializing Q-Network...
+2018-03-22 16:56:47,774 [INFO] [q_net]  Random
+2018-03-22 16:56:48,316 [INFO] [q_net]  Random
+2018-03-22 16:56:48,317 [INFO] [q_net] step: 1
+2018-03-22 16:56:48,317 [INFO] [module] Step:None  Action:3  Reward:-0.0 
+2018-03-22 16:56:48,708 [INFO] [q_net] step: 2
+2018-03-22 16:56:48,709 [INFO] [module] Step:None  Action:1  Reward:-0.1 
+2018-03-22 16:56:49,104 [INFO] [q_net] step: 3
+2018-03-22 16:56:49,104 [INFO] [module] Step:None  Action:3  Reward:-0.1 
+2018-03-22 16:56:49,520 [INFO] [q_net]  Random
+2018-03-22 16:56:49,520 [INFO] [q_net] step: 4
+2018-03-22 16:56:49,520 [INFO] [module] Step:None  Action:3  Reward:-0.1 
+2018-03-22 16:56:49,925 [INFO] [q_net] step: 5
+2018-03-22 16:56:49,925 [INFO] [module] Step:None  Action:1  Reward:-0.1 
+2018-03-22 16:56:50,330 [INFO] [q_net] step: 6
+2018-03-22 16:56:50,330 [INFO] [module] Step:None  Action:1  Reward:-0.1 
+2018-03-22 16:56:50,729 [INFO] [q_net]  Random
+2018-03-22 16:56:50,729 [INFO] [q_net] step: 7
+2018-03-22 16:56:50,729 [INFO] [module] Step:None  Action:1  Reward:-0.2 
+2018-03-22 16:56:51,125 [INFO] [q_net]  Random
+2018-03-22 16:56:51,125 [INFO] [q_net] step: 8
+2018-03-22 16:56:51,131 [INFO] [module] Step:None  Action:3  Reward:-0.2 
+2018-03-22 16:56:51,542 [INFO] [q_net]  Random
+2018-03-22 16:56:51,542 [INFO] [q_net] step: 9
+2018-03-22 16:56:51,542 [INFO] [module] Step:None  Action:3  Reward:-0.2 
+2018-03-22 16:56:51,947 [INFO] [q_net] step: 10
+2018-03-22 16:56:51,947 [INFO] [module] Step:None  Action:0  Reward:-0.2 
+2018-03-22 16:56:52,354 [INFO] [q_net] step: 11
+2018-03-22 16:56:52,354 [INFO] [module] Step:None  Action:2  Reward:-0.2 
+2018-03-22 16:56:52,787 [INFO] [q_net] step: 12
+2018-03-22 16:56:52,787 [INFO] [module] Step:None  Action:2  Reward:-0.3 
+2018-03-22 16:56:52,942 [INFO] [q_net]  Random
+2018-03-22 16:56:53,203 [INFO] [q_net] step: 13
+2018-03-22 16:56:53,203 [INFO] [module] Step:None  Action:1  Reward:-0.0 
+2018-03-22 16:56:53,680 [INFO] [q_net]  Random
+2018-03-22 16:56:53,680 [INFO] [q_net] step: 14
+2018-03-22 16:56:53,681 [INFO] [module] Step:None  Action:2  Reward:-0.0 
+2018-03-22 16:56:54,149 [INFO] [q_net]  Random
+2018-03-22 16:56:54,149 [INFO] [q_net] step: 15
+2018-03-22 16:56:54,149 [INFO] [module] Step:None  Action:0  Reward:-0.1 
+2018-03-22 16:56:54,334 [INFO] [q_net]  Random
+2018-03-22 16:56:54,520 [INFO] [q_net]  Random
+2018-03-22 16:56:54,520 [INFO] [q_net] step: 16
+2018-03-22 16:56:54,520 [INFO] [module] Step:None  Action:3  Reward:-0.0 
+2018-03-22 16:56:55,140 [INFO] [q_net]  Random
+2018-03-22 16:56:55,140 [INFO] [q_net] step: 17
+2018-03-22 16:56:55,140 [INFO] [module] Step:None  Action:2  Reward:-0.0 
+2018-03-22 16:56:55,537 [INFO] [q_net] step: 18
+2018-03-22 16:56:55,537 [INFO] [module] Step:None  Action:3  Reward:-0.1 
+2018-03-22 16:56:55,926 [INFO] [q_net]  Random
+2018-03-22 16:56:55,926 [INFO] [q_net] step: 19
+2018-03-22 16:56:55,926 [INFO] [module] Step:None  Action:2  Reward:-0.1 
+2018-03-22 16:56:56,333 [INFO] [q_net] step: 20
+2018-03-22 16:56:56,334 [INFO] [module] Step:None  Action:0  Reward:-0.1 
+2018-03-22 16:56:56,475 [INFO] [q_net]  Random
+2018-03-22 16:56:56,669 [INFO] [q_net] step: 21
+2018-03-22 16:56:56,669 [INFO] [module] Step:None  Action:2  Reward:-0.0 
+2018-03-22 16:56:57,263 [INFO] [q_net]  Random
+2018-03-22 16:56:57,263 [INFO] [q_net] step: 22
+2018-03-22 16:56:57,264 [INFO] [module] Step:None  Action:0  Reward:-0.0 
+2018-03-22 16:56:57,703 [INFO] [q_net]  Random
+2018-03-22 16:56:57,703 [INFO] [q_net] step: 23
+2018-03-22 16:56:57,703 [INFO] [module] Step:None  Action:0  Reward:-0.1 
+2018-03-22 16:56:58,101 [INFO] [q_net]  Random
+2018-03-22 16:56:58,101 [INFO] [q_net] step: 24
+2018-03-22 16:56:58,101 [INFO] [module] Step:None  Action:3  Reward:-0.1 
+2018-03-22 16:56:58,493 [INFO] [q_net]  Random
+2018-03-22 16:56:58,494 [INFO] [q_net] step: 25
+2018-03-22 16:56:58,494 [INFO] [module] Step:None  Action:0  Reward:-0.1 
+2018-03-22 16:56:58,903 [INFO] [q_net] step: 26
+2018-03-22 16:56:58,903 [INFO] [module] Step:None  Action:2  Reward:-0.1 
+2018-03-22 16:56:59,347 [INFO] [q_net]  Random
+2018-03-22 16:56:59,347 [INFO] [q_net] step: 27
+2018-03-22 16:56:59,347 [INFO] [module] Step:None  Action:1  Reward:-0.1 
+2018-03-22 16:56:59,448 [INFO] [q_net]  Random
+2018-03-22 16:56:59,664 [INFO] [q_net]  Random
+2018-03-22 16:56:59,664 [INFO] [q_net] step: 28
+2018-03-22 16:56:59,664 [INFO] [module] Step:None  Action:2  Reward:-0.0 
+2018-03-22 16:57:00,293 [INFO] [q_net] step: 29
+2018-03-22 16:57:00,294 [INFO] [module] Step:None  Action:3  Reward:-0.0 
+2018-03-22 16:57:00,698 [INFO] [q_net]  Random
+2018-03-22 16:57:00,698 [INFO] [q_net] step: 30
+2018-03-22 16:57:00,698 [INFO] [module] Step:None  Action:0  Reward:-0.1 
+2018-03-22 16:57:01,189 [INFO] [q_net] step: 31
+2018-03-22 16:57:01,196 [INFO] [module] Step:None  Action:2  Reward:-0.1 
+2018-03-22 16:57:01,644 [INFO] [q_net]  Random
+2018-03-22 16:57:01,645 [INFO] [q_net] step: 32
+2018-03-22 16:57:01,645 [INFO] [module] Step:None  Action:0  Reward:-0.1 
+2018-03-22 16:57:02,044 [INFO] [q_net]  Random
+2018-03-22 16:57:02,045 [INFO] [q_net] step: 33
+2018-03-22 16:57:02,045 [INFO] [module] Step:None  Action:3  Reward:-0.1 
+2018-03-22 16:57:02,448 [INFO] [q_net]  Random
+2018-03-22 16:57:02,448 [INFO] [q_net] step: 34
+2018-03-22 16:57:02,448 [INFO] [module] Step:None  Action:0  Reward:-0.2 
+2018-03-22 16:57:02,850 [INFO] [q_net] step: 35
+2018-03-22 16:57:02,851 [INFO] [module] Step:None  Action:1  Reward:-0.2 
+2018-03-22 16:58:40,161 [INFO] [server] loading... /home/omori/デスクトップ/GItHub/hackathon-2017-HM_SYS/agent/model/alexnet_feature_extractor.pickle
+2018-03-22 16:59:35,819 [INFO] [server] done
+2018-03-22 16:59:58,573 [INFO] [q_net] Initializing Q-Network...
+2018-03-22 16:59:58,701 [INFO] [q_net]  Random
+2018-03-22 16:59:59,223 [INFO] [q_net]  Random
+2018-03-22 16:59:59,223 [INFO] [q_net] step: 1
+2018-03-22 16:59:59,224 [INFO] [module] Step:None  Action:2  Reward:-0.0 
+2018-03-22 16:59:59,648 [INFO] [q_net] step: 2
+2018-03-22 16:59:59,649 [INFO] [module] Step:None  Action:1  Reward:-0.1 
+2018-03-22 16:59:59,787 [INFO] [q_net]  Random
+2018-03-22 17:00:00,048 [INFO] [q_net] step: 3
+2018-03-22 17:00:00,048 [INFO] [module] Step:None  Action:3  Reward:-0.0 
+2018-03-22 17:00:00,625 [INFO] [q_net]  Random
+2018-03-22 17:00:00,626 [INFO] [q_net] step: 4
+2018-03-22 17:00:00,626 [INFO] [module] Step:None  Action:3  Reward:-0.0 
+2018-03-22 17:00:01,020 [INFO] [q_net] step: 5
+2018-03-22 17:00:01,020 [INFO] [module] Step:None  Action:2  Reward:-0.1 
+2018-03-22 17:00:01,536 [INFO] [q_net] step: 6
+2018-03-22 17:00:01,546 [INFO] [module] Step:None  Action:2  Reward:-0.1 
+2018-03-22 17:00:01,666 [INFO] [q_net]  Random
+2018-03-22 17:00:01,888 [INFO] [q_net] step: 7
+2018-03-22 17:00:01,888 [INFO] [module] Step:None  Action:0  Reward:-0.0 
+2018-03-22 17:00:02,524 [INFO] [q_net]  Random
+2018-03-22 17:00:02,524 [INFO] [q_net] step: 8
+2018-03-22 17:00:02,524 [INFO] [module] Step:None  Action:0  Reward:-0.0 
+2018-03-22 17:00:02,942 [INFO] [q_net]  Random
+2018-03-22 17:00:02,943 [INFO] [q_net] step: 9
+2018-03-22 17:00:02,943 [INFO] [module] Step:None  Action:2  Reward:-0.1 
+2018-03-22 17:00:03,346 [INFO] [q_net]  Random
+2018-03-22 17:00:03,346 [INFO] [q_net] step: 10
+2018-03-22 17:00:03,346 [INFO] [module] Step:None  Action:2  Reward:-0.1 
+2018-03-22 17:00:03,748 [INFO] [q_net]  Random
+2018-03-22 17:00:03,749 [INFO] [q_net] step: 11
+2018-03-22 17:00:03,749 [INFO] [module] Step:None  Action:1  Reward:-0.1 
+2018-03-22 17:00:03,968 [INFO] [q_net]  Random
+2018-03-22 17:00:04,221 [INFO] [q_net]  Random
+2018-03-22 17:00:04,221 [INFO] [q_net] step: 12
+2018-03-22 17:00:04,221 [INFO] [module] Step:None  Action:3  Reward:-0.0 
+2018-03-24 14:50:41,037 [INFO] [server] loading... /home/omori/デスクトップ/GItHub/hackathon-2017-HM_SYS/agent/model/alexnet_feature_extractor.pickle
+2018-03-24 14:51:36,705 [INFO] [server] done
+2018-03-24 14:51:55,195 [INFO] [q_net] Initializing Q-Network...
+2018-03-24 14:51:55,320 [INFO] [q_net]  Random
+2018-03-24 14:51:55,924 [INFO] [q_net]  Random
+2018-03-24 14:51:55,924 [INFO] [q_net] step: 1
+2018-03-24 14:51:55,924 [INFO] [module] Step:None  Action:3  Reward:-0.0 
+2018-03-24 14:51:56,391 [INFO] [q_net] step: 2
+2018-03-24 14:51:56,391 [INFO] [module] Step:None  Action:0  Reward:-0.1 
+2018-03-24 14:51:56,785 [INFO] [q_net] step: 3
+2018-03-24 14:51:56,785 [INFO] [module] Step:None  Action:0  Reward:-0.1 
+2018-03-24 14:51:57,190 [INFO] [q_net]  Random
+2018-03-24 14:51:57,190 [INFO] [q_net] step: 4
+2018-03-24 14:51:57,190 [INFO] [module] Step:None  Action:3  Reward:-0.1 
+2018-03-24 14:51:57,580 [INFO] [q_net]  Random
+2018-03-24 14:51:57,580 [INFO] [q_net] step: 5
+2018-03-24 14:51:57,580 [INFO] [module] Step:None  Action:3  Reward:-0.1 
+2018-03-24 14:51:58,034 [INFO] [q_net] step: 6
+2018-03-24 14:51:58,034 [INFO] [module] Step:None  Action:1  Reward:-0.1 
+2018-03-24 14:51:58,453 [INFO] [q_net] step: 7
+2018-03-24 14:51:58,453 [INFO] [module] Step:None  Action:2  Reward:-0.2 
+2018-03-24 14:51:58,827 [INFO] [q_net] step: 8
+2018-03-24 14:51:58,827 [INFO] [module] Step:None  Action:3  Reward:-0.2 
+2018-03-24 14:51:59,021 [INFO] [q_net]  Random
+2018-03-24 14:51:59,261 [INFO] [q_net] step: 9
+2018-03-24 14:51:59,269 [INFO] [module] Step:None  Action:3  Reward:-0.0 
+2018-03-24 14:51:59,793 [INFO] [q_net]  Random
+2018-03-24 14:51:59,794 [INFO] [q_net] step: 10
+2018-03-24 14:51:59,794 [INFO] [module] Step:None  Action:3  Reward:-0.0 
+2018-03-24 14:52:00,219 [INFO] [q_net] step: 11
+2018-03-24 14:52:00,219 [INFO] [module] Step:None  Action:3  Reward:-0.1 
+2018-03-24 14:52:00,687 [INFO] [q_net] step: 12
+2018-03-24 14:52:00,687 [INFO] [module] Step:None  Action:1  Reward:-0.1 

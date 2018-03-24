@@ -1,4 +1,4 @@
-[22/Mar/2018:16:56:47] HTTP 
+[22/Mar/2018:16:59:58] HTTP 
 Traceback (most recent call last):
   File "/home/omori/.pyenv/versions/2.7.11/lib/python2.7/site-packages/cherrypy/_cprequest.py", line 670, in respond
     response.body = self.handler()
@@ -14,19 +14,19 @@ Traceback (most recent call last):
     self.step_for_time(self.event_queue.queue[0].time)
   File "/home/omori/.pyenv/versions/2.7.11/lib/python2.7/site-packages/brica1/scheduler.py", line 257, in step_for_time
     component.fire()
-  File "/home/omori/デスクトップ/GItHub/hackathon-2017-HM_SYS/agent/cognitive/module.py", line 91, in fire
+  File "/home/omori/デスクトップ/GItHub/hackathon-2017-HM_SYS/agent/cognitive/module.py", line 86, in fire
     action = self.q_net.decisionMaking(self.episode_feature, self.temp)
   File "/home/omori/デスクトップ/GItHub/hackathon-2017-HM_SYS/agent/ml/q_net.py", line 145, in decisionMaking
     if episode_feature[0][0] == False:
 IndexError: invalid index to scalar variable.
-[22/Mar/2018:16:56:47] HTTP 
+[22/Mar/2018:16:59:58] HTTP 
 Request Headers:
   HOST: localhost:8765
   EXPECT: 100-continue
   Remote-Addr: 127.0.0.1
-  Content-Length: 17413
+  Content-Length: 19202
   Content-Type: text/plain
-[22/Mar/2018:16:56:47]  
+[22/Mar/2018:16:59:58]  
 Traceback (most recent call last):
   File "/home/omori/.pyenv/versions/2.7.11/lib/python2.7/site-packages/cherrypy/_cprequest.py", line 589, in run
     self.respond(pi)
@@ -41,7 +41,7 @@ Traceback (most recent call last):
   File "/home/omori/.pyenv/versions/2.7.11/lib/python2.7/site-packages/cherrypy/_cperror.py", line 549, in get_error_page
     return result.encode('utf-8')
 UnicodeDecodeError: 'ascii' codec can't decode byte 0xe3 in position 1314: ordinal not in range(128)
-[22/Mar/2018:16:56:52] HTTP 
+[22/Mar/2018:16:59:59] HTTP 
 Traceback (most recent call last):
   File "/home/omori/.pyenv/versions/2.7.11/lib/python2.7/site-packages/cherrypy/_cprequest.py", line 670, in respond
     response.body = self.handler()
@@ -51,52 +51,17 @@ Traceback (most recent call last):
     return self.callable(*self.args, **self.kwargs)
   File "server.py", line 121, in reset
     result = self.agent_service.reset(reward, identifier)
-  File "/home/omori/デスクトップ/GItHub/hackathon-2017-HM_SYS/agent/cognitive/service.py", line 114, in reset
-    self.bg_components[identifier].end(reward)
-AttributeError: 'BGComponent' object has no attribute 'end'
-[22/Mar/2018:16:56:52] HTTP 
-Request Headers:
-  HOST: localhost:8765
-  EXPECT: 100-continue
-  Remote-Addr: 127.0.0.1
-  Content-Length: 52
-  Content-Type: text/plain
-[22/Mar/2018:16:56:52]  
-Traceback (most recent call last):
-  File "/home/omori/.pyenv/versions/2.7.11/lib/python2.7/site-packages/cherrypy/_cprequest.py", line 589, in run
-    self.respond(pi)
-  File "/home/omori/.pyenv/versions/2.7.11/lib/python2.7/site-packages/cherrypy/_cprequest.py", line 690, in respond
-    self.handle_error()
-  File "/home/omori/.pyenv/versions/2.7.11/lib/python2.7/site-packages/cherrypy/_cprequest.py", line 767, in handle_error
-    self.error_response()
-  File "/home/omori/.pyenv/versions/2.7.11/lib/python2.7/site-packages/cherrypy/_cperror.py", line 405, in set_response
-    message=self._message)
-  File "/home/omori/.pyenv/versions/2.7.11/lib/python2.7/site-packages/cherrypy/_cperror.py", line 411, in get_error_page
-    return get_error_page(*args, **kwargs)
-  File "/home/omori/.pyenv/versions/2.7.11/lib/python2.7/site-packages/cherrypy/_cperror.py", line 549, in get_error_page
-    return result.encode('utf-8')
-UnicodeDecodeError: 'ascii' codec can't decode byte 0xe3 in position 1303: ordinal not in range(128)
-[22/Mar/2018:16:56:54] HTTP 
-Traceback (most recent call last):
-  File "/home/omori/.pyenv/versions/2.7.11/lib/python2.7/site-packages/cherrypy/_cprequest.py", line 670, in respond
-    response.body = self.handler()
-  File "/home/omori/.pyenv/versions/2.7.11/lib/python2.7/site-packages/cherrypy/lib/encoding.py", line 221, in __call__
-    self.body = self.oldhandler(*args, **kwargs)
-  File "/home/omori/.pyenv/versions/2.7.11/lib/python2.7/site-packages/cherrypy/_cpdispatch.py", line 60, in __call__
-    return self.callable(*self.args, **self.kwargs)
-  File "server.py", line 121, in reset
-    result = self.agent_service.reset(reward, identifier)
-  File "/home/omori/デスクトップ/GItHub/hackathon-2017-HM_SYS/agent/cognitive/service.py", line 114, in reset
-    self.bg_components[identifier].end(reward)
-AttributeError: 'BGComponent' object has no attribute 'end'
-[22/Mar/2018:16:56:54] HTTP 
+  File "/home/omori/デスクトップ/GItHub/hackathon-2017-HM_SYS/agent/cognitive/service.py", line 111, in reset
+    self.ub_components[identifier].end(action, reward)
+AttributeError: 'UBComponent' object has no attribute 'end'
+[22/Mar/2018:16:59:59] HTTP 
 Request Headers:
   HOST: localhost:8765
   EXPECT: 100-continue
   Remote-Addr: 127.0.0.1
   Content-Length: 50
   Content-Type: text/plain
-[22/Mar/2018:16:56:54]  
+[22/Mar/2018:16:59:59]  
 Traceback (most recent call last):
   File "/home/omori/.pyenv/versions/2.7.11/lib/python2.7/site-packages/cherrypy/_cprequest.py", line 589, in run
     self.respond(pi)
@@ -111,7 +76,7 @@ Traceback (most recent call last):
   File "/home/omori/.pyenv/versions/2.7.11/lib/python2.7/site-packages/cherrypy/_cperror.py", line 549, in get_error_page
     return result.encode('utf-8')
 UnicodeDecodeError: 'ascii' codec can't decode byte 0xe3 in position 1303: ordinal not in range(128)
-[22/Mar/2018:16:56:56] HTTP 
+[22/Mar/2018:17:00:01] HTTP 
 Traceback (most recent call last):
   File "/home/omori/.pyenv/versions/2.7.11/lib/python2.7/site-packages/cherrypy/_cprequest.py", line 670, in respond
     response.body = self.handler()
@@ -121,17 +86,17 @@ Traceback (most recent call last):
     return self.callable(*self.args, **self.kwargs)
   File "server.py", line 121, in reset
     result = self.agent_service.reset(reward, identifier)
-  File "/home/omori/デスクトップ/GItHub/hackathon-2017-HM_SYS/agent/cognitive/service.py", line 114, in reset
-    self.bg_components[identifier].end(reward)
-AttributeError: 'BGComponent' object has no attribute 'end'
-[22/Mar/2018:16:56:56] HTTP 
+  File "/home/omori/デスクトップ/GItHub/hackathon-2017-HM_SYS/agent/cognitive/service.py", line 111, in reset
+    self.ub_components[identifier].end(action, reward)
+AttributeError: 'UBComponent' object has no attribute 'end'
+[22/Mar/2018:17:00:01] HTTP 
 Request Headers:
   HOST: localhost:8765
   EXPECT: 100-continue
   Remote-Addr: 127.0.0.1
   Content-Length: 50
   Content-Type: text/plain
-[22/Mar/2018:16:56:56]  
+[22/Mar/2018:17:00:01]  
 Traceback (most recent call last):
   File "/home/omori/.pyenv/versions/2.7.11/lib/python2.7/site-packages/cherrypy/_cprequest.py", line 589, in run
     self.respond(pi)
@@ -146,7 +111,7 @@ Traceback (most recent call last):
   File "/home/omori/.pyenv/versions/2.7.11/lib/python2.7/site-packages/cherrypy/_cperror.py", line 549, in get_error_page
     return result.encode('utf-8')
 UnicodeDecodeError: 'ascii' codec can't decode byte 0xe3 in position 1303: ordinal not in range(128)
-[22/Mar/2018:16:56:59] HTTP 
+[22/Mar/2018:17:00:03] HTTP 
 Traceback (most recent call last):
   File "/home/omori/.pyenv/versions/2.7.11/lib/python2.7/site-packages/cherrypy/_cprequest.py", line 670, in respond
     response.body = self.handler()
@@ -156,17 +121,95 @@ Traceback (most recent call last):
     return self.callable(*self.args, **self.kwargs)
   File "server.py", line 121, in reset
     result = self.agent_service.reset(reward, identifier)
-  File "/home/omori/デスクトップ/GItHub/hackathon-2017-HM_SYS/agent/cognitive/service.py", line 114, in reset
-    self.bg_components[identifier].end(reward)
-AttributeError: 'BGComponent' object has no attribute 'end'
-[22/Mar/2018:16:56:59] HTTP 
+  File "/home/omori/デスクトップ/GItHub/hackathon-2017-HM_SYS/agent/cognitive/service.py", line 111, in reset
+    self.ub_components[identifier].end(action, reward)
+AttributeError: 'UBComponent' object has no attribute 'end'
+[22/Mar/2018:17:00:03] HTTP 
+Request Headers:
+  HOST: localhost:8765
+  EXPECT: 100-continue
+  Remote-Addr: 127.0.0.1
+  Content-Length: 50
+  Content-Type: text/plain
+[22/Mar/2018:17:00:03]  
+Traceback (most recent call last):
+  File "/home/omori/.pyenv/versions/2.7.11/lib/python2.7/site-packages/cherrypy/_cprequest.py", line 589, in run
+    self.respond(pi)
+  File "/home/omori/.pyenv/versions/2.7.11/lib/python2.7/site-packages/cherrypy/_cprequest.py", line 690, in respond
+    self.handle_error()
+  File "/home/omori/.pyenv/versions/2.7.11/lib/python2.7/site-packages/cherrypy/_cprequest.py", line 767, in handle_error
+    self.error_response()
+  File "/home/omori/.pyenv/versions/2.7.11/lib/python2.7/site-packages/cherrypy/_cperror.py", line 405, in set_response
+    message=self._message)
+  File "/home/omori/.pyenv/versions/2.7.11/lib/python2.7/site-packages/cherrypy/_cperror.py", line 411, in get_error_page
+    return get_error_page(*args, **kwargs)
+  File "/home/omori/.pyenv/versions/2.7.11/lib/python2.7/site-packages/cherrypy/_cperror.py", line 549, in get_error_page
+    return result.encode('utf-8')
+UnicodeDecodeError: 'ascii' codec can't decode byte 0xe3 in position 1303: ordinal not in range(128)
+[24/Mar/2018:14:51:55] HTTP 
+Traceback (most recent call last):
+  File "/home/omori/.pyenv/versions/2.7.11/lib/python2.7/site-packages/cherrypy/_cprequest.py", line 670, in respond
+    response.body = self.handler()
+  File "/home/omori/.pyenv/versions/2.7.11/lib/python2.7/site-packages/cherrypy/lib/encoding.py", line 221, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "/home/omori/.pyenv/versions/2.7.11/lib/python2.7/site-packages/cherrypy/_cpdispatch.py", line 60, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "server.py", line 108, in step
+    result = self.agent_service.step(reward, observation, identifier)
+  File "/home/omori/デスクトップ/GItHub/hackathon-2017-HM_SYS/agent/cognitive/service.py", line 101, in step
+    self.schedulers[identifier].step(5000)
+  File "/home/omori/.pyenv/versions/2.7.11/lib/python2.7/site-packages/brica1/scheduler.py", line 279, in step
+    self.step_for_time(self.event_queue.queue[0].time)
+  File "/home/omori/.pyenv/versions/2.7.11/lib/python2.7/site-packages/brica1/scheduler.py", line 257, in step_for_time
+    component.fire()
+  File "/home/omori/デスクトップ/GItHub/hackathon-2017-HM_SYS/agent/cognitive/module.py", line 86, in fire
+    action = self.q_net.decisionMaking(self.episode_feature, self.temp)
+  File "/home/omori/デスクトップ/GItHub/hackathon-2017-HM_SYS/agent/ml/q_net.py", line 145, in decisionMaking
+    if episode_feature[0][0] == False:
+IndexError: invalid index to scalar variable.
+[24/Mar/2018:14:51:55] HTTP 
+Request Headers:
+  HOST: localhost:8765
+  EXPECT: 100-continue
+  Remote-Addr: 127.0.0.1
+  Content-Length: 19276
+  Content-Type: text/plain
+[24/Mar/2018:14:51:55]  
+Traceback (most recent call last):
+  File "/home/omori/.pyenv/versions/2.7.11/lib/python2.7/site-packages/cherrypy/_cprequest.py", line 589, in run
+    self.respond(pi)
+  File "/home/omori/.pyenv/versions/2.7.11/lib/python2.7/site-packages/cherrypy/_cprequest.py", line 690, in respond
+    self.handle_error()
+  File "/home/omori/.pyenv/versions/2.7.11/lib/python2.7/site-packages/cherrypy/_cprequest.py", line 767, in handle_error
+    self.error_response()
+  File "/home/omori/.pyenv/versions/2.7.11/lib/python2.7/site-packages/cherrypy/_cperror.py", line 405, in set_response
+    message=self._message)
+  File "/home/omori/.pyenv/versions/2.7.11/lib/python2.7/site-packages/cherrypy/_cperror.py", line 411, in get_error_page
+    return get_error_page(*args, **kwargs)
+  File "/home/omori/.pyenv/versions/2.7.11/lib/python2.7/site-packages/cherrypy/_cperror.py", line 549, in get_error_page
+    return result.encode('utf-8')
+UnicodeDecodeError: 'ascii' codec can't decode byte 0xe3 in position 1314: ordinal not in range(128)
+[24/Mar/2018:14:51:58] HTTP 
+Traceback (most recent call last):
+  File "/home/omori/.pyenv/versions/2.7.11/lib/python2.7/site-packages/cherrypy/_cprequest.py", line 670, in respond
+    response.body = self.handler()
+  File "/home/omori/.pyenv/versions/2.7.11/lib/python2.7/site-packages/cherrypy/lib/encoding.py", line 221, in __call__
+    self.body = self.oldhandler(*args, **kwargs)
+  File "/home/omori/.pyenv/versions/2.7.11/lib/python2.7/site-packages/cherrypy/_cpdispatch.py", line 60, in __call__
+    return self.callable(*self.args, **self.kwargs)
+  File "server.py", line 121, in reset
+    result = self.agent_service.reset(reward, identifier)
+  File "/home/omori/デスクトップ/GItHub/hackathon-2017-HM_SYS/agent/cognitive/service.py", line 111, in reset
+    self.ub_components[identifier].end(action, reward)
+AttributeError: 'UBComponent' object has no attribute 'end'
+[24/Mar/2018:14:51:58] HTTP 
 Request Headers:
   HOST: localhost:8765
   EXPECT: 100-continue
   Remote-Addr: 127.0.0.1
   Content-Length: 52
   Content-Type: text/plain
-[22/Mar/2018:16:56:59]  
+[24/Mar/2018:14:51:58]  
 Traceback (most recent call last):
   File "/home/omori/.pyenv/versions/2.7.11/lib/python2.7/site-packages/cherrypy/_cprequest.py", line 589, in run
     self.respond(pi)
