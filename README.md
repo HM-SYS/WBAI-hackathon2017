@@ -10,7 +10,7 @@ Then, we modeled that it is combine episodic memory with value.
 ### Place cell
 
 　In the 3rd WBAI hackathon's task, we thought that locational information was important.
-Then, we implemented the place cell model using "Slow Feature Analysis" (SFA).
+Then, we implemented the place cell model using "Slow Feature Analysis(SFA)".
 
 
 ## Module outline
