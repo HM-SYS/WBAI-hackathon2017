@@ -1,51 +1,64 @@
-##モデル概要
- 今回私たちは、海馬の機能として「エピソード記憶」と「場所細胞」の二点に注目したモデルである。
+# Overview
+=============
 
-### エピソード記憶
+ We modeled that it is focused on "Episodic memory" and "place cell" of the hippocampal function.
 
-　エピソード記憶は「いつ・どこで・誰が・なにをした」などの情報から形成される。この情報は五感によって処理された結果であるとした。これよりエピソード記憶は、視覚・聴覚などの感覚情報の処理結果として与えられる特徴ベクトルだとした。また、この特徴ベクトルには感情などからなる価値が付随すると考えた。
+### Episodic memory
 
-### 場所細胞
+　Episodic memory is formed from "When, Where, Who, What did", and so on. Episodic memory is the result of processing sensory information. We assumed that episodic memory is a set of feature vectors.
+Then, we modeled that it is combine episodic memory with value.
 
-　エピソード記憶において「どこ」にあたる場所の情報を持たせるために、”Slow Feature Analysis”(SFA)を用いた場所細胞モデルを実装した。[1]
+### Place cell
 
-参考　
-+- [1](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3725472/)　　
-
-## モジュール概要
-
-+![image](https://user-images.githubusercontent.com/30830112/37827923-b140ab22-2edc-11e8-9f96-5673afa3b0b2.png)
+　In the 3rd WBAI hackathon's task, we thought that locational information was important.
+Then, we implemented the place cell model using "Slow Feature Analysis" (SFA).
 
 
+## Module outline
+
++![image](https://user-images.githubusercontent.com/30830112/37890140-63568ac8-310a-11e8-8f29-12bd28c695ab.png)
 
 
-## 学習方法
-　SFAを用いて場所細胞モデルを実装させることより、自己位置を推定することができ、過去の経験から価値が高いエピソードを抽出する。抽出したエピソードに紐づく価値をにより行動確率を計算することで行動選択する。
-つまり、ある場所(事象)に対して未来の価値の高い行動が選ばれやすくなる仕組みである。
+## Learning method
 
+ The agent acuired the features (visual, location) from the visual information.
+Episodic memory is saved by the combine features (visual, location) with value.
+Value propagates back toward to the start at the end of the episode.
+Similar episodes are extracted from current features and the past episodic memory.
+Decision making was selected for similar episodes using the softmax method.
 
-## 環境設定
+## Preferences
 
-### Unity Version
+- OS Ubuntu 14.04
+- Unity 5.3.4f1
+- Python 2.7.11
 
-Unity: 5.3.4f1
+### install
+install python modules:
+```
+pip install -r agent/requirements.txt
+```
 
-### Python Version
-Python 2.7.11
+## Quick Start
+download data:
 
-### Other Version
-- cd / home/ User name/ hackathon-2017-HM_SYS 
-- sh fetch.sh
-- cd agent
-- pip install –r requirements.txt
+```
+./fetch.sh
+```
 
-### BriCA1 install
-- cd/ home/ User name/ BriCA1-devel
-- pip install .
-- pip freeze
+Next, run python module as a server.
 
-+![image](https://user-images.githubusercontent.com/30830112/37820302-85695f9e-2ec3-11e8-9661-4f8c9c363c8e.png)
+```
+cd agent
+python server.py
+```
+Open environment with Unity and load Scenes/Startup.
+Press Start Button. This will take a few minutes for loading caffe model.
 
+## Reference 
 
++ [RatLab : an easy to use tool for place code simulations] (https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3725472/) , frontiers in Computational Neuroscience，2013
++ [WBAI HACKATHON 2017 Sample](https://github.com/wbap/hackathon-2017-sample)
 
-
+## License
++ Apache License, Version 2.0
