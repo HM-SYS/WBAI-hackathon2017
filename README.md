@@ -57,7 +57,7 @@ Press Start Button. This will take a few minutes for loading caffe model.
 ## Reference 
 
 + [RatLab : an easy to use tool for place code simulations](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3725472/) , frontiers in Computational Neuroscience，2013
-+ [WBAI HACKATHON 2017 Sample](https://github.com/wbap/hackathon-2017-sample)
++ [WBAI HACKATHON 2017 Sample](https://github.com/wbap/hackathon-2017-sample/wiki/Instruction-for-the-Sample-Code)
 
 ## License
 + Apache License, Version 2.0
