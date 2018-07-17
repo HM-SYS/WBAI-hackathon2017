@@ -2,7 +2,7 @@
 
 import copy
 import numpy as np
-from chainer import cuda, FunctionSet, Variable
+from chainer import cuda, FunctionSet, Variable, optimizers
 import chainer.functions as F
 
 from config.log import APP_KEY
@@ -44,9 +44,65 @@ class QNet:
 
         self.model_target = copy.deepcopy(self.model)
 
+        self.optimizer = optimizers.RMSpropGraves(lr=0.00025, alpha=0.95, momentum=0.95, eps=0.0001)
+        self.optimizer.setup(self.model.collect_parameters())
+
+        # History Data :  D=[s, a, r, s_dash, end_episode_flag]
+        self.d = [np.zeros((self.data_size, self.hist_size, self.dim), dtype=np.uint8),
+                  np.zeros(self.data_size, dtype=np.uint8),
+                  np.zeros((self.data_size, 1), dtype=np.int8),
+                  np.zeros((self.data_size, self.hist_size, self.dim), dtype=np.uint8),
+                  np.zeros((self.data_size, 1), dtype=np.bool)]
+
+    def forward(self, state, action, reward, state_dash, episode_end):
+        num_of_batch = state.shape[0]
+        s = Variable(state)
+        s_dash = Variable(state_dash)
+
+        q = self.q_func(s)
+        tmp = self.q_func_target(s_dash)  # Q(s',*)
+        if self.use_gpu >= 0:
+            tmp = list(map(np.max, tmp.data.get()))  # max_a Q(s',a)
+        else:
+            tmp = list(map(np.max, tmp.data))  # max_a Q(s',a)
+
+        max_q_dash = np.asanyarray(tmp, dtype=np.float32)
+        if self.use_gpu >= 0:
+            target = np.asanyarray(q.data.get(), dtype=np.float32)
+        else:
+            target = np.array(q.data, dtype=np.float32)
+
+        for i in xrange(num_of_batch):
+            if not episode_end[i][0]:
+                tmp_ = reward[i] + self.gamma * max_q_dash[i]
+            else:
+                tmp_ = reward[i]
+
+            action_index = self.action_to_index(action[i])
+            target[i, action_index] = tmp_
+
+        # TD-error clipping
+        if self.use_gpu >= 0:
+            target = cuda.to_gpu(target)
+        td = Variable(target) - q  # TD error
+        td_tmp = td.data + 1000.0 * (abs(td.data) <= 1)  # Avoid zero division
+        td_clip = td * (abs(td.data) <= 1) + td/abs(td_tmp) * (abs(td.data) > 1)
+
+        zero_val = np.zeros((self.replay_size, self.num_of_actions), dtype=np.float32)
+        if self.use_gpu >= 0:
+            zero_val = cuda.to_gpu(zero_val)
+        zero_val = Variable(zero_val)
+        loss = F.mean_squared_error(td_clip, zero_val)
+        return loss, q
+
     def q_func(self, state):
         h4 = F.relu(self.model.l4(state / 255.0))
         q = self.model.q_value(h4)
+        return q
+
+    def q_func_target(self, state):
+        h4 = F.relu(self.model_target.l4(state / 255.0))
+        q = self.model_target.q_value(h4)
         return q
 
     def e_greedy(self, state, epsilon):
@@ -56,7 +112,7 @@ class QNet:
 
         if np.random.rand() < epsilon:
             index_action = np.random.randint(0, self.num_of_actions)
-            app_logger.info(" Random")
+            app_logger.info(" Random_e_greesy "+str(index_action))
         else:
             if self.use_gpu >= 0:
                 index_action = np.argmax(q.get())
@@ -89,21 +145,20 @@ class QNet:
         return return_action
 
     def update_model(self, replayed_experience):
-
         self.time += 1
-        app_logger.info("step: {}".format(self.time))
+        app_logger.info("step(model): {}".format(self.time))
 
     def update_temp(self, reward, temp):
 
-        if temp >= 1 and reward >= 0:
-            retTemp = temp * self.increaseTemp
-        if temp <= 1 and reward < 0:
+        if temp <= 1 and reward >= 0:
             retTemp = temp * self.decreaseTemp
-        if (temp > 1 and reward < 0) or (temp < 1 and reward > 0):
+        if temp >= 1 and reward < 0:
+            retTemp = temp * self.increaseTemp
+        if (temp < 1 and reward < 0) or (temp > 1 and reward >= 0):
             retTemp = 1
 
         self.time += 1
-        app_logger.info("step: {}".format(self.time))
+        app_logger.info("step(temp): {}".format(self.time))
 
         return retTemp
 
@@ -144,7 +199,7 @@ class QNet:
     def decisionMaking(self, episode_feature, temp):
         if episode_feature[0][0] == False:
             index_action = np.random.randint(0, self.num_of_actions)
-            app_logger.info(" Random")
+            app_logger.info(" Random_decisionMaking "+str(index_action))
         else:
             action_lst = np.zeros(self.num_of_actions)
             action_num = np.zeros(self.num_of_actions)
@@ -161,7 +216,7 @@ class QNet:
                 else:
                     calc_lst.append(0)
 
-            e = np.exp(npa(calc_lst) / temp)
+            e = np.exp((npa(calc_lst) / temp)*-1)
             dist = e / np.sum(e)
             rand = np.random.rand()
             softmaxVal = 0
@@ -171,4 +226,4 @@ class QNet:
                 if softmaxVal >= rand and boo == False:
                     index_action = i
                     boo = True
-        return self.index_to_action(index_action)
+        return self.index_to_action(index_action), calc_lst, temp, action_num
